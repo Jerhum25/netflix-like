@@ -51,7 +51,7 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
      .movieInfos{
       flex-direction: column-reverse;
       gap: 20px;
@@ -73,6 +73,7 @@
           justify-content: space-between;
           button{
             width: 50%;
+            font-size: 16px;
           }
         }
       }
