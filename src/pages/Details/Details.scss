@@ -1,0 +1,112 @@
+.detailsContainer {
+  display: flex;
+  padding: 100px 50px 50px 50px;
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    color: #fff;
+    h2 {
+      font-size: 50px;
+    }
+    p.overview {
+      width: 60%;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px 10px;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+
+        transition: scale 0.1s ease-in-out;
+        &:active {
+          scale: 0.95;
+        }
+        p::first-letter {
+          text-transform: capitalize;
+        }
+        &:first-child {
+          background-color: red;
+          border: 1px solid red;
+        }
+        &:last-child {
+          background-color: #000;
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
+  img {
+    height: 50svh;
+    width: 50svw;
+    object-fit: cover;
+    object-position: center;
+  }
+  .backButton1,
+  .backButton2 {
+    display: none;
+    width: fit-content;
+    padding: 8px 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #000;
+    border: 1px solid #fff;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .backButton1 {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .detailsContainer {
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 50px 10px 50px 10px;
+    img {
+      width: 100%;
+    }
+    .description {
+      width: 100%;
+      h2 {
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      p.overview {
+        width: 100%;
+        text-align: justify;
+      }
+      .buttons {
+        justify-content: space-between;
+        button {
+          width: 50%;
+          font-size: 16px;
+        }
+      }
+    }
+    .backButton1{
+        display: none;
+    }
+    .backButton2 {
+      display: block;
+    }
+  }
+}
