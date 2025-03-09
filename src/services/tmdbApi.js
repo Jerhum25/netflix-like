@@ -1,5 +1,6 @@
 const TMDB_KEY = process.env.REACT_APP_TMDB_KEY;
 const TMDB_BASE_URL = process.env.REACT_APP_TMDB_BASE_URL;
+console.log(TMDB_KEY);
 
 const fetchMoviePopular = async () => {
   return await fetch(`${TMDB_BASE_URL}/movie/popular?api_key=${TMDB_KEY}`).then(
