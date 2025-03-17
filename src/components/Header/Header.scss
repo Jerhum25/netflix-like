@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100%;
+  width: 100svw;
   background: linear-gradient(to bottom, #000, rgba(#000, 0.9) 100%);
   .logo {
     width: 200px;
@@ -14,31 +14,68 @@
     }
   }
   .user {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    overflow: hidden;
     cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .hello {
+      color: #fff;
+    }
     img {
-      width: 100%;
-      height: 100%;
+      border-radius: 5px;
+      width: 40px;
+      height: 40px;
       transition: 0.3s ease-in-out;
       &:hover {
         scale: 1.2;
+      }
+    }
+    .connectForm {
+      position: absolute;
+      background-color: #fff;
+      top: 100%;
+      right: 0;
+      width: fit-content;
+      height: fit-content;
+      padding: 20px;
+      border-radius: 5px;
+      display: none;
+      flex-direction: column;
+      label {
+        margin-bottom: 5px;
+      }
+      input {
+        margin-bottom: 10px;
+        font-size: 16px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #000;
+      }
+      button {
+        text-transform: capitalize;
+        padding: 5px;
+        align-self: flex-end;
+      }
+      &.visible {
+        display: flex;
       }
     }
   }
 }
 
 @media screen and (max-width: 992px) {
-   .headerContainer{
+  .headerContainer {
     height: 50px;
     padding: 10px;
-    .logo{
+    .logo {
       width: 100px;
     }
-    .user{
-      width: 25px;height: 25px;
+    .user {
+      img{
+        width: 25px;
+        height: 25px;
+      }
     }
-   }
+  }
 }

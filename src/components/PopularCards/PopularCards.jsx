@@ -31,6 +31,7 @@ function PopularCards(props) {
                 new Date(item.release_date).getFullYear()
               );
               localStorage.setItem("overview", item.overview);
+              localStorage.setItem("voteAverage", (item.vote_average).toFixed(1));
               localStorage.setItem(
                 "image",
                 `https://image.tmdb.org/t/p/original${item.backdrop_path}`
